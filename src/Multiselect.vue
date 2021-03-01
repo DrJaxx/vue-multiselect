@@ -124,12 +124,12 @@
                     </slot>
                 </span>
                 <span
-                  v-if="option && (option.$isLabel || option.$isDisabled)"
-                  :data-select="groupSelect && selectGroupLabelText"
-                  :data-deselect="groupSelect && deselectGroupLabelText"
+                  v-if="option && option.$isDisabled)"
+                  :data-select="option && option.isTag ? tagPlaceholder : selectLabelText"
+                  :data-deselect="deselectLabelText"
                   :class="groupHighlight(index, option)"
-                  @mouseenter.self="groupSelect && pointerSet(index)"
-                  @mousedown.prevent="selectGroup(option)"
+                  @mouseenter.self=""
+                  @mousedown.prevent=""
                   class="multiselect__option">
                     <slot name="option" :option="option" :search="search" :index="index">
                       <span>{{ getOptionLabel(option) }}</span>
