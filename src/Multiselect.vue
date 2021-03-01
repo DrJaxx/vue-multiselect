@@ -128,8 +128,6 @@
                   :data-select="option && option.isTag ? tagPlaceholder : selectLabelText"
                   :data-deselect="deselectLabelText"
                   :class="groupHighlight(index, option)"
-                  @mouseenter.self=""
-                  @mousedown.prevent=""
                   class="multiselect__option">
                     <slot name="option" :option="option" :search="search" :index="index">
                       <span>{{ getOptionLabel(option) }}</span>
