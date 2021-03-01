@@ -124,7 +124,7 @@
                     </slot>
                 </span>
                 <span
-                  v-if="option && option.$isDisabled)"
+                  v-if="option && option.$isDisabled"
                   :data-select="option && option.isTag ? tagPlaceholder : selectLabelText"
                   :data-deselect="deselectLabelText"
                   :class="groupHighlight(index, option)"
